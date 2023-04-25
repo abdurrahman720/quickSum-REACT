@@ -44,9 +44,9 @@ const Demo = () => {
       }
     };
   
-  const handleCopy = (copyUrl) => {
-    setCopied(copyUrl);
-    navigator.clipboard.writeText(copyUrl)
+  const handleCopy = (copyText) => {
+    setCopied(copyText);
+    navigator.clipboard.writeText(copyText)
     setTimeout(()=>setCopied(false), 3000)
   }
 
@@ -109,10 +109,13 @@ const Demo = () => {
                   <h2 className="font-satoshi font-bold text-gray-600 text-xl">
                     Article <span className="blue_gradient">Summary</span>
                   </h2>
-                  <div className="summary_box">
+                  <div className="summary_box flex ">
                     <p className="font-inter font-medium text-sm text-gray-700">
-                      {article?.summary}
+                      {article?.summary}   <div className="copy_btn">
+                <img src={copied === article?.summary ? tick : copy} onClick={()=>handleCopy(article?.summary)} alt="copy_icon" className="w-[40%] h-[40%] object-contain" />
+              </div>
                     </p>
+                   
                   </div>
                 </div>
               )
