@@ -7,7 +7,7 @@ const Hero = () => {
       <header className='w-full flex justify-center items-center flex-col'>
           <nav className='flex justify-between items-center w-full mb-10 pt-3'>
               <img src={logo} alt="logo" className="w-36 object-contain" />
-              <button type='button' onClick={()=> window.open("https://github.com/")} className="black_btn">
+              <button type='button' onClick={()=> window.open("https://github.com/abdurrahman720/quickSum-REACT")} className="black_btn">
                   GitHub
               </button>
           </nav>
